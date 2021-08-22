@@ -1,0 +1,31 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.caja{
+    display: block;
+    width: 250px;
+    height: 250px;
+    background-color: lightblue;
+    border: 5px solid red;
+    margin: 15px;
+    padding: 20px;
+    float: left
+}
+
+.caja p{
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 235px;
+}
+
+.clearfix {
+    float: none;
+    clear: both   /* limpia flotados */
+}
+
+#cajas {
+    border: 5px solid black;
+}
