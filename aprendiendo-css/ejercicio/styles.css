@@ -1,0 +1,96 @@
+/*
+Ejercicio completo con HTML y CSS
+1. Crear un documento HTML y vincularlo con un CSS
+2. Crear una estructura HTML que cuente con un CONTENEDOR GENERAL,
+CABECERA, MENU, BARRA LATERAL, SECCION DE CONTENIDO PRINCIPAL,
+ELEMENTOS DENTRO DEL CONTENEDOR PRINCIPAL Y FOOTER
+3. Todo el contenido  debe estar dentro del contenedor general
+y su ancho será de 1200px y estar centrado
+4. Header debe ocupar el 100% del ancho y tener un texto grande 
+centrado.
+5. Menu debe tener los elementos uno al lado del otro
+6. El contenido principal debe tener un ancho del 70%
+7. El contenido dentro del contenedor principal debe ser
+una cuadricula con 4 lineas de 2 cajas
+8. La barra lateral debe tener un ancho del 30%
+9. El footer debe tener un ancho del 100% del div que le contiene
+y estar abajo del todo
+*/
+
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#container {
+    width: 1200px;
+    border: 1px solid gainsboro;
+    margin: 0px auto;
+}
+
+#main {
+    width: 69%;
+    border: 1px solid gainsboro;   
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    height: 100px;
+    line-height: 90px;
+    background-color: darkturquoise;
+    color: whitesmoke;
+}
+
+#navbar {
+    background-color: ghostwhite;
+}
+
+#navbar ul li {
+    display: block;
+    float: left;
+    border-right: 1px solid gainsboro;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: grey;
+    display: block;
+    padding: 10px;
+}
+
+#navbar ul li:hover{
+    cursor: pointer;
+    background-color: darkturquoise;
+}
+
+.clearfix {
+    float: none;
+    clear: both;
+}
+
+.caja {
+    width: 40%;
+    height: 250px;
+    border: 2px solid darkturquoise;
+    display: block;
+    float: left;
+    margin: 20px;
+    margin-left: 50px;
+}
+
+#barra {
+    width: 30%;
+    min-height: 500px;
+    text-align: center;
+}
+
+#barra, #main {
+    float: left;
+}
+
+#footer {
+    text-align: center;
+    margin: 30px
+}
