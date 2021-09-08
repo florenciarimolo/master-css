@@ -1,0 +1,42 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+ul li:first-child {
+    color: blueviolet;
+}
+
+ul li:nth-child(2) {
+    color: coral;
+}
+
+#link {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#link:link {
+    color: crimson;
+}
+
+#link:visited {
+    color: coral
+}
+
+#link:hover {
+    cursor: pointer;
+}
+
+#link:active {
+    color: cornflowerblue;
+}
+
+.clearfix {
+    clear: both;
+    float: none;
+}
+
+input[type="text"]:focus {
+    border: 2px dashed coral;
+}
+
