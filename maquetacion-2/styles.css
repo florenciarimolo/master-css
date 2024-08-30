@@ -34,7 +34,7 @@ body {
 
 /* HEADER */
 
-#wrap {
+.wrap {
     margin: 0px auto;
     /*padding-left: 100px;
     padding-right: 100px;*/
@@ -172,5 +172,125 @@ body {
         /*font-size: 30px; NO, esto cambia el css y
         hara que cambien los margenes, mejor usar un transform */
         transform: scale(1.2, 1.2); /* Esto no transforma el CSS */
+    }
+}
+
+/* BANNER */
+
+#banner {
+    display: block;
+    border: 10px solid white;
+    background-color: white;
+    box-shadow: 0px 0px 2px gray;
+    height: 100px;
+    background: url(img/bakbaner.png);
+    background-position: -200px -200px;
+    margin-top: 20px;
+}
+
+#banner-content {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 80px;
+    font-family: "BebasNeue";
+    letter-spacing: 2px;
+    font-size: 40px;
+    padding: 10px;
+}
+
+#banner-content h1 {
+    color: white;
+    /* offset-x | offset-y | blur-radius | color */
+    text-shadow: 1px 3px 4px black;
+}
+
+/* Secciones info */
+
+#tarjetas {
+    display: block;
+    margin-top: 70px;
+    height: 110px;
+}
+
+#tarjetas article {
+    display: block;
+    float: left;
+    box-shadow: 0px 0px 2px gray;
+    padding: 10px;
+    text-align: center;
+    color: #276194;
+    font-family: "TrebuchetMS";
+    width: 200px;
+    height: 300px;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: all 300ms;
+    overflow: hidden;
+
+    &:hover {
+        background-color: black;
+        color: white;
+    }
+
+    &:hover .article-icon {
+        color: #37bcf9;
+        animation: desplazamiento-icon-article 400ms linear 1;
+    }
+
+    &:hover h3 {
+        animation: desplazamiento-header-article 400ms linear 1;
+    }
+
+    &:hover p {
+        animation: desplazamiento-texto-article 400ms linear 1;
+    }
+}
+
+.article-icon {
+    display: block;
+    font-family: WebSymbolsRegular;
+    color: black;
+    font-size: 55px;
+    padding-top: 30px;
+}
+
+#tarjetas article h3 {
+    margin: 50px 0px 30px 0px;
+}
+
+@keyframes desplazamiento-icon-article {
+    0% {
+        position: relative;
+        top: -100px;
+    }
+    100% {
+        position: relative;
+        top: 0px;
+    }
+}
+
+@keyframes desplazamiento-header-article {
+    0% {
+        position: relative;
+        top: -50px;
+    }
+    100% {
+        position: relative;
+        top: 0px;
+    }
+}
+
+@keyframes desplazamiento-texto-article {
+    0% {
+        position: relative;
+        left: -150px;
+    }
+    100% {
+        position: relative;
+        left: 0px;
     }
 }
