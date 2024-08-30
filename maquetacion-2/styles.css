@@ -1,0 +1,176 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+@font-face {
+    font-family: "TrebuchetMS";
+    src: url(fonts/TrebuchetMS.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "BebasNeue";
+    src: url(fonts/BebasNeue.otf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "WebSymbolsRegular";
+    src: url(fonts/websymbols-regular-webfont.eot);
+    src: url(fonts/websymbols-regular-webfont.eot?#iefix) format('embedded-opentype'),
+    url(fonts/websymbols-regular-webfont.woff) format('woff'),
+    url(fonts/websymbols-regular-webfont.ttf) format('truetype'),
+    url(fonts/websymbols-regular-webfont.svg#WebSymbolsRegular) format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: url("img/pattern.png");
+}
+
+/* HEADER */
+
+#wrap {
+    margin: 0px auto;
+    /*padding-left: 100px;
+    padding-right: 100px;*/
+
+    /* Otra manera sin los paddings */
+    width: 1200px;
+
+}
+
+#header {
+    background-color: black;
+    width: 100%;
+    height: 70px;
+    font-family: "BebasNeue";
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* LOGO */
+#logo {
+    float: left;
+    height: 55px;
+    width: 200px;
+    background-color: #37bcf9;
+    border: none;
+    text-transform: uppercase;
+    font-size: 35px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 2px;
+    margin-top: 7px;
+    margin-left: 20px;
+    overflow: hidden;
+    transition: color 500ms, background-color 500ms;
+
+    &:hover {
+        background-color: #ccc;
+        color: black;
+    }
+
+    &:hover .gear {
+        animation: desplazamiento-gear 300ms linear;
+        animation-iteration-count: 1;
+    }
+
+    &:hover h3 {
+        animation: desplazamiento-h3 300ms linear;
+        animation-iteration-count: 1;
+    }
+}
+
+#logo .gear {
+    display: block;
+    font-family: WebSymbolsRegular;
+    float: left;
+    padding-left: 20px;
+    padding-right: 15px;
+    line-height: 52px;
+    animation: rotate 2s linear infinite;
+    font-size: 30px;
+}
+
+
+#logo h3 {
+    display: block;
+    float: left;
+    line-height: 57px;
+}
+
+/*ANIMACIONES LOGO */
+
+@keyframes rotate {
+    from {
+        rotate: 0deg;
+    }
+
+    to {
+        rotate: 360deg;
+    }
+}
+
+@keyframes desplazamiento-gear {
+    0% {
+        position: relative;
+        top: 0px;
+    }
+    50% {
+        position: relative;
+        top: 50px;
+    }
+    100% {
+        position: relative;
+        top: 0px;
+    }
+}
+
+@keyframes desplazamiento-h3 {
+    0% {
+        position: relative;
+        left: 150px;
+    }
+    100% {
+        position: relative;
+        left: 0px;
+    }
+}
+
+/* NAV LINKS */
+
+#nav {
+    font-size: 25px;
+    float: right;
+}
+
+#nav ul {
+    list-style: none;
+}
+
+#nav ul > li {
+    line-height: 75px;
+    display: inline-block;
+    margin: 0px 20px 0px 20px;
+}
+
+#nav ul > li a {
+    display: block;
+    float: left;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    transition: all 300ms;
+
+    &:hover {
+        color: #37bcf9;
+        /*font-size: 30px; NO, esto cambia el css y
+        hara que cambien los margenes, mejor usar un transform */
+        transform: scale(1.2, 1.2); /* Esto no transforma el CSS */
+    }
+}
