@@ -180,7 +180,6 @@ body {
 #banner {
     display: block;
     border: 10px solid white;
-    background-color: white;
     box-shadow: 0px 0px 2px gray;
     height: 100px;
     background: url(img/bakbaner.png);
@@ -211,7 +210,8 @@ body {
 #tarjetas {
     display: block;
     margin-top: 70px;
-    height: 110px;
+    height: 300px;
+    width: 100%;
 }
 
 #tarjetas article {
@@ -293,4 +293,53 @@ body {
         position: relative;
         left: 0px;
     }
+}
+
+#main {
+    margin-left: 10px;
+    margin-top: 90px;
+}
+
+#articles {
+    width: 70%;
+    height: 1025px;
+    float: left;
+}
+
+#articles-header {
+    display: block;
+    background: url(img/pxgray.png) repeat;
+    background-color: white;
+    height: 75px;
+    box-shadow: 3px 5px gray;
+}
+
+#articles h1 {    
+    text-transform: uppercase;
+    font-family: "BebasNeue";
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 80px;
+}
+
+#aside {
+    display: block;
+    float: left;
+    margin-left: 90px;
+    width: 21%;
+}
+
+#aside h4 {
+    background: url(img/pxgray.png) repeat;
+    background-color: white;
+    height: 45px;
+    box-shadow: 3px 5px gray;
+    margin-bottom: 20px;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-family: "BebasNeue";
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 50px;
 }
