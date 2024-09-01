@@ -312,6 +312,7 @@ body {
     background-color: white;
     height: 75px;
     box-shadow: 3px 5px gray;
+    margin-bottom: 20px;
 }
 
 #articles h1 {    
@@ -342,4 +343,45 @@ body {
     letter-spacing: 2px;
     text-align: center;
     line-height: 50px;
+}
+
+#articles article {
+    padding: 0px 00px 20px 10px;
+    margin: 20px 10px 30px 10px;
+    box-shadow: 0px 0px 2px gray;
+    background-color: white;
+    font-family: "TrebuchetMS";
+}
+
+#articles h4 {
+    display: block;
+    float: left;
+    color: #276194;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#articles .fecha {
+    display: block;
+    float: right;
+    height: 35px;
+    background-color: #393d3f;
+    border-radius: 0px 0px 0px 5px;
+    line-height: 33px;
+    font-size: 13px;
+    width: 220px;
+    text-align: center;
+    color: white;
+}
+
+#articles article p {
+    color: #393d3f;
+    padding-right: 10px;
+    margin-top: 10px;
+    
+}
+
+.clearfix {
+    float: none;
+    clear: both;
 }
