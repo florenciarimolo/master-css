@@ -303,6 +303,8 @@ body {
     }
 }
 
+/* ARTICULOS */
+
 #main {
     margin-left: 20px;
     margin-top: 70px;
@@ -340,12 +342,18 @@ body {
     font-family: "TrebuchetMS";
 }
 
-#articles h4 {
+#articles h4 a {
     display: block;
     float: left;
     color: #276194;
     margin-top: 10px;
     font-size: 20px;
+    text-decoration: none;
+}
+
+#articles article p a {
+    color: #276194;
+    text-decoration: none;
 }
 
 #articles .fecha {
