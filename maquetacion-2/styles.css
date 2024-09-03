@@ -440,6 +440,35 @@ body {
     border: none;
     box-shadow: inset 0px 0px 4px #ccc;
     border-radius: 4px;
+    color: #393d3f;
+}
+
+#search .input-field {
+    width: 83%;
+    padding-inline: 10px 35px;
+}
+
+#search {
+    width: 100%;
+    position: relative;
+}
+
+#search .icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    height: 21px;
+    width: 25px;
+    margin: 2px 2px 2px 0px;
+    background-color: white;
+    border: none;
+    border-left: 1px solid #ccc;
+    line-height: 22px;
+    text-align: center;
+    color: #393d3f;
+    font-size: 12px;
 }
 
 #login-form input {
@@ -490,29 +519,6 @@ body {
     margin: 15px 15px 0px 15px;
 }
 
-#search-form {
-    position: relative;
-    width: 100%;
-    margin: 20px 20px 20px 20px;
-}
-
-
-#search-form span {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    cursor: pointer;
-    height: 20px;
-    width: 28px;
-
-    border-left: 1px solid #ccc;
-    line-height: 25px;
-    text-align: center;
-    color: #393d3f;
-    font-size: 12px;
-}
-
 #redes-sociales, #colaboradores {
     width: 100%;
     height: 240px;
@@ -520,4 +526,8 @@ body {
     background-color: white;
     box-shadow: 0px 0px 10px 2px #ccc;
     font-family: "TrebuchetMS";
+}
+
+.icon {
+    font-family: WebSymbolsRegular;
 }
