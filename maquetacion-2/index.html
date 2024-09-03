@@ -8,6 +8,7 @@
     <title>Maquetación responsive con Víctor Robles</title>
     <link rel="icon" type="favicon/x-icon" href="img/supertux.png" />
     <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 
 <body>
@@ -37,15 +38,14 @@
 
     </header>
     <div class="wrap">
-        <section id="banner" class="wrap">
-            <section id="banner-content">
-                <h1>Cursos de desarrollo web con Víctor Robles WEB</h2>
-            </section>
+        <section id="banner">
+            <h1>Cursos de desarrollo web con Víctor Robles WEB</h2>
         </section>
-        <section id="tarjetas" class="wrap">
+        <section id="cards">
             <article>
                 <span class="article-icon">H</span>
                 <h3>Desarrollo Web</h3>
+                <!-- Mejor h2 porque es la segunda categoria mas importante despues del banner -->
                 <p>Aprende los principales lenguajes para desarrollar webs ¡Conviértete en un webmaster!</p>
             </article>
             <article>
@@ -131,11 +131,47 @@
                 </article>
             </section>
             <aside id="aside">
+
                 <h4>Buscar</h4>
+                <div class="aside-content">
+                    <form>
+                        <input class="input-field" type="text" />
+                        <input type="button" value="L" />
+                    </form>
+                </div>
                 <h4>Login</h4>
+                <div class="aside-content">
+                    <form id="login-form">
+                        <input type="text" />
+                        <input type="text" />
+                        <button id="entrar" class="login-button">Entrar</button>
+                        <button id="limpiar" class="login-button">Limpiar</button>
+                        <div class="clearfix"></div>
+                        <a href="#">Regístrate aquí</a>
+                        <a href="#">¿Has olvidado tu contraseña?</a>
+                    </form>
+                </div>
                 <h4>Redes sociales</h4>
+                <div class="aside-content">
+                    <div id="redes-sociales">
+
+                    </div>
+
+                </div>
                 <h4>Colaboradores</h4>
+                <div class="aside-content">
+                    <div id="colaboradores">
+                        
+                    </div>
+
+                </div>
             </aside>
+            <div class="clearfix"></div>
+            <section id="blog-section">
+                <div id="blog">
+                    <a href="#">Ir al Blog</a>
+                </div>
+            </section>
         </section>
     </div>
 </body>
