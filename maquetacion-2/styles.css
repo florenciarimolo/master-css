@@ -223,7 +223,7 @@ body {
     text-align: center;
     color: #276194;
     font-family: "TrebuchetMS";
-    width: 194px;
+    width: 193px;
     height: 300px;
     background-color: white;
     margin-inline: 16px 16px;
@@ -232,7 +232,7 @@ body {
     overflow: hidden;
 
     &:hover {
-        background-color: black;
+        background-color: #1e1d1d;
         color: white;
     }
 
@@ -261,7 +261,7 @@ body {
 .article-icon {
     display: block;
     font-family: WebSymbolsRegular;
-    color: black;
+    color: #1e1d1d;
     font-size: 55px;
     padding-top: 30px;
 }
@@ -508,6 +508,7 @@ body {
     top: 16px;
     left: 20px;
     font-size: 15px;
+    color: #393d3f;
 }
 
 #login-form #password {
@@ -515,7 +516,8 @@ body {
     position: absolute;
     top: 69px;
     left: 23px;
-    font-size: 18px; 
+    font-size: 18px;
+    color: #393d3f; 
 }
 
 #login-form, #redes-sociales, #colaboradores {
@@ -565,4 +567,61 @@ body {
     font-size: 13px;
     color: #393d3f;
     margin: 5px 15px 0px 15px;
+}
+
+/* REDES SOCIALES */
+
+#redes-sociales > div {
+    width: 85%;
+    height: 40px;
+    padding: 10px 20px 10px 20px;
+    transition: all 300ms;
+    cursor: pointer;
+
+    &:hover > div > p {
+        display: block;
+        margin: 0px auto;
+        margin-left: 20px;
+        text-align: center;
+        width: 80%;
+        height: 90%;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        box-shadow: 1px 1px 4px #ccc;
+        animation: desplazamiento-rs 200ms linear 1;
+    }
+}
+
+#redes-sociales > div > a {
+    text-decoration: none;
+    font-size: 30px;
+    color: #393d3f;
+    margin: 0px;
+    display: block;
+    float: left;
+}
+
+#redes-sociales div > div {
+    display: block;
+    float: left;
+    line-height: 36px;
+    width: 120px;
+    height: 40px;
+    overflow: hidden;
+}
+
+
+#redes-sociales div > div > p {
+    display: none;
+}
+
+@keyframes desplazamiento-rs {
+    from {
+        position: relative;
+        left: -70px;
+    }
+    to {
+        position: relative;
+        left: 0px;
+    }
 }
