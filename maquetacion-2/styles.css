@@ -530,15 +530,25 @@ body {
 
 .login-button {
     display: block;
-    width: 98px;
+    width: 100px;
     height: 32px;
     color: white;
     border-radius: 2px;
-    background-color: #37bcf9;
+    /* Otra manera del background */
+    background: linear-gradient(to bottom,  #37bcf9 0%, #2da1cb 100%);
+    /*background: linear-gradient(180deg,  #37bcf9 0%, #2da1cb 100%);*/
     cursor: pointer;
-    border: 1px solid #276194;
+    border: 1px solid #156785;
     margin: 15px;
-    font-size: 14px;
+    font-size: 15px;
+    text-align: center;
+    transition: all 300ms;
+
+    &:hover {
+        color: #393d3f;
+        background: linear-gradient(to bottom,  #dfdfdf 0%, #a0a0a0 100%);
+        border: 1px solid #393d3f;
+    }
 }
 
 #entrar {
@@ -554,5 +564,5 @@ body {
     text-decoration: none;
     font-size: 13px;
     color: #393d3f;
-    margin: 15px 15px 0px 15px;
+    margin: 5px 15px 0px 15px;
 }
