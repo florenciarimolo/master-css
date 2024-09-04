@@ -44,7 +44,7 @@ body {
     padding-right: 100px;*/
 
     /* Otra manera sin los paddings */
-    width: 1250px;
+    width: 1200px;
 
 }
 
@@ -76,7 +76,6 @@ body {
     cursor: pointer;
     border-radius: 2px;
     margin-top: 7px;
-    margin-left: 20px;
     overflow: hidden;
     transition: color 500ms, background-color 500ms;
 
@@ -169,6 +168,14 @@ body {
     margin: 0px 20px 0px 20px;
 }
 
+nav ul > li:first-child {
+    margin-left: 0px !important;
+}
+
+nav ul > li:last-child {
+    margin-right: 0px !important;
+}
+
 #nav ul > li a {
     display: block;
     float: left;
@@ -196,7 +203,7 @@ body {
     background-position: -200px -200px;
     margin: 0px auto;
     margin-top: 20px;
-    width: 95%;
+    width: 98.2%;
 }
 
 #banner h1 {
@@ -221,7 +228,7 @@ body {
     margin: 0px auto;
     margin-top: 40px;
     height: 350px;
-    width: 96.5%;
+    width: 100%;
 }
 
 #cards article {
@@ -233,10 +240,10 @@ body {
     text-align: center;
     color: #276194;
     font-family: "TrebuchetMS";
-    width: 193px;
+    width: 202px;
     height: 300px;
     background-color: white;
-    margin-inline: 16px 16px;
+    margin-inline: 10px 10px;
     cursor: pointer;
     transition: all 300ms;
     overflow: hidden;
@@ -316,13 +323,11 @@ body {
 /* ARTICULOS */
 
 #main {
-    margin-left: 20px;
-    margin-top: 70px;
+    margin-top: 60px;
 }
 
 #articles {
     width: 70%;
-    height: 970px;
     float: left;
 }
 
@@ -343,18 +348,22 @@ body {
 }
 
 #articles article {
-    padding: 0px 0px 20px 10px;
+    padding: 10px;
     margin: 20px 10px 30px 10px;
-    box-shadow: 0px 0px 2px gray;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 2px #ddd;
     background-color: white;
     font-family: "TrebuchetMS";
+}
+
+#articles h4 {
+    display: block;
 }
 
 #articles h4 a {
     display: block;
     float: left;
     color: #276194;
-    margin-top: 10px;
     font-size: 20px;
     text-decoration: none;
 }
@@ -368,6 +377,7 @@ body {
     display: block;
     float: right;
     height: 35px;
+    margin: -10px;
     background-color: #393d3f;
     border-radius: 0px 0px 0px 5px;
     line-height: 33px;
@@ -380,12 +390,7 @@ body {
 #articles article p {
     color: #393d3f;
     padding-right: 10px;
-    margin-top: 10px;
-    
-}
-
-#blog-section {
-    width: 70%;
+    margin-top: 10px;  
 }
 
 #blog {
@@ -394,29 +399,30 @@ body {
     text-align: center;
     line-height: 130px;
     margin: 0px 10px 30px 10px;
+
+    transition: all 300ms;
+
+
+    &:hover {
+        background-color: #393d3f;
+        text-shadow: 1px 3px black;
+        border-radius: 10%;
+        border: 10px solid #37bcf9;
+    }
+
+    &:hover a {
+        color: white;
+    }
 }
 
 #blog a {
     display: block;
     font-family: "BebasNeue";
+    font-size: 35px;
     text-decoration: none;
     text-transform: uppercase;
-    color: #276194;
-    font-size: 35px;
     letter-spacing: 2px;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    box-shadow: 0px 0px 2px gray;
-    transition: all 300ms;
-
-    &:hover {
-        background-color: #393d3f;
-        color: white;
-        text-shadow: 1px 3px black;
-        border-radius: 10%;
-        border: 10px solid #37bcf9;
-    }
+    color: #276194;
 }
 
 /* ASIDE */
@@ -424,8 +430,8 @@ body {
 #aside {
     display: block;
     float: left;
-    margin-inline: 60px 20px;
-    width: 23%;
+    margin-left: 60px;
+    width: 25%;
 }
 
 #aside h4 {
@@ -631,4 +637,41 @@ body {
         position: relative;
         left: 0px;
     }
+}
+
+/* FOOTER */
+footer {
+    display: block;
+    width: 100%;
+    height: 430px;
+    background-color: black;
+}
+
+footer .wrap div {
+    float: left;
+    width: 325px;
+    margin-top: 20px;
+}
+
+#footer-menu, #map {
+    margin-right: 20px;
+}
+
+#map, #extra-info {
+    margin-left: 20px;
+}
+
+footer .wrap div h3 {
+    display: block;
+    width: 100%;
+    background: url(../img/pxgray.png) repeat;
+    background-color: white;
+    border-radius: 4px;
+    height: 50px;
+    text-transform: uppercase;
+    font-family: "BebasNeue";
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 30px;
+    line-height: 40px;
 }
