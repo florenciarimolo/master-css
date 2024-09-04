@@ -647,18 +647,14 @@ footer {
     background-color: black;
 }
 
-footer .wrap div {
+footer .wrap {
+    margin: 0px auto;
+}
+
+footer .wrap > div {
     float: left;
-    width: 325px;
-    margin-top: 20px;
-}
-
-#footer-menu, #map {
-    margin-right: 20px;
-}
-
-#map, #extra-info {
-    margin-left: 20px;
+    width: 330px;
+    margin: 20px 35px 20px 35px;
 }
 
 footer .wrap div h3 {
@@ -673,5 +669,57 @@ footer .wrap div h3 {
     letter-spacing: 2px;
     text-align: center;
     font-size: 30px;
-    line-height: 40px;
+    line-height: 55px;
 }
+
+.footer-content {
+    margin: 20px auto;
+    text-align: center;
+    font-family: "TrebuchetMS";
+}
+
+#footer-menu ul {
+    display: block;
+}
+
+#footer-menu li {
+    list-style: none;
+    display: block;
+    height: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+#footer-menu :last-child {
+    border-bottom: none;
+}
+
+#footer-menu li a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #37bcf9;
+    line-height: 50px;
+}
+
+#map iframe {
+    border-radius: 4px;
+}
+
+.browser-img {
+    width: 45px;
+    height: 45px;
+}
+
+#extra-info > p {
+    color: white;
+}
+
+#extra-info > p > a {
+    color: white;
+    text-decoration: none;
+    transition: all 300ms;
+
+    &:hover {
+        color: #37bcf9;
+    }
+}
+
