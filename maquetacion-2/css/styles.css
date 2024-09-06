@@ -171,7 +171,7 @@ body {
     float: right;
 }
 
-#nav ul {
+#nav > ul {
     list-style: none;
 }
 
@@ -681,6 +681,7 @@ footer .wrap > div {
     float: left;
     width: 330px;
     margin: 20px 35px 20px 35px;
+    overflow: hidden;
 }
 
 footer .wrap div h5 {
@@ -704,14 +705,17 @@ footer .wrap div h5 {
     font-family: "TrebuchetMS";
 }
 
-#footer-menu ul {
+#footer-menu .footer-content {
+    text-align: left;
+    color: white;
+    padding-left: 15px;
+}
+
+#footer-menu .footer-content ul {
     display: block;
 }
 
 #footer-menu li {
-    list-style: none;
-    display: block;
-    height: 50px;
     border-bottom: 1px solid #ccc;
 }
 
@@ -720,10 +724,17 @@ footer .wrap div h5 {
 }
 
 #footer-menu li a {
+    display: block;
     text-decoration: none;
     font-size: 25px;
     color: #37bcf9;
     line-height: 50px;
+    transition: all 300ms;
+
+    &:hover {
+        padding-left: 40px;
+        color: white;
+    }
 }
 
 #map iframe {
