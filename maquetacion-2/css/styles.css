@@ -85,13 +85,11 @@ body {
     }
 
     &:hover .gear {
-        animation: desplazamiento-gear 300ms linear;
-        animation-iteration-count: 1;
+        animation: desplazamiento-gear 500ms linear 1;
     }
 
     &:hover h3 {
-        animation: desplazamiento-h3 300ms linear;
-        animation-iteration-count: 1;
+        animation: desplazamiento-h3 500ms linear 1;
     }
 }
 
@@ -117,14 +115,15 @@ body {
 
 @keyframes rotate {
     from {
-        rotate: 0deg;
+        rotate: 0deg; /* o transform: rotateZ(0deg) */
     }
 
     to {
-        rotate: 360deg;
+        rotate: 360deg; /* o transform: rotateZ(360deg) */
     }
 }
 
+/*
 @keyframes desplazamiento-gear {
     0% {
         position: relative;
@@ -137,6 +136,20 @@ body {
     100% {
         position: relative;
         top: 0px;
+    }
+} 
+*/
+
+/* Otra manera de hacerlo */
+@keyframes desplazamiento-gear {
+    0% {
+        transform: translateY(0%);
+    }
+    50% {
+        transform: translateY(200%);
+    }
+    100% {
+        transform: translateY(0%);
     }
 }
 
@@ -255,15 +268,16 @@ nav ul > li:last-child {
 
     &:hover .article-icon {
         color: #37bcf9;
-        animation: desplazamiento-icon-article 400ms linear 1;
+        font-size: 70px;
+        animation: desplazamiento-icon-article 300ms linear;
     }
 
     &:hover h3 {
-        animation: desplazamiento-header-article 400ms linear 1;
+        animation: desplazamiento-header-article 400ms linear;
     }
 
     &:hover p {
-        animation: desplazamiento-texto-article 400ms linear 1;
+        animation: desplazamiento-texto-article 400ms linear;
     }
 }
 
@@ -280,43 +294,42 @@ nav ul > li:last-child {
     font-family: WebSymbolsRegular;
     color: #1e1d1d;
     font-size: 55px;
-    padding-top: 30px;
+    height: 130px;
+    line-height: 130px;
 }
 
 #cards article h3 {
-    margin: 50px 0px 30px 0px;
+    height: 50px;
 }
 
 @keyframes desplazamiento-icon-article {
     0% {
-        position: relative;
-        top: -100px;
+        transform: translateY(-200%);
     }
     100% {
-        position: relative;
-        top: 0px;
+        transform: translateY(0%);
     }
 }
 
 @keyframes desplazamiento-header-article {
     0% {
-        position: relative;
-        top: -50px;
+        transform: translateY(-300%);
+        color: #1e1d1d;
     }
     100% {
-        position: relative;
-        top: 0px;
+        transform: translateY(0%);
+        color: white;
     }
 }
 
 @keyframes desplazamiento-texto-article {
     0% {
-        position: relative;
-        left: -150px;
+        transform: translateX(-300%);
+        color: #1e1d1d;
     }
     100% {
-        position: relative;
-        left: 0px;
+        transform: translateX(0%);
+        color: white;
     }
 }
 
@@ -585,23 +598,14 @@ nav ul > li:last-child {
 /* REDES SOCIALES */
 
 #redes-sociales > div {
-    width: 85%;
     height: 40px;
     padding: 10px 20px 10px 20px;
-    transition: all 300ms;
     cursor: pointer;
+    transition: all 300ms;
 
-    &:hover > div > p {
+    &:hover > p {
         display: block;
-        margin: 0px auto;
-        margin-left: 20px;
-        text-align: center;
-        width: 80%;
-        height: 90%;
-        border: 1px solid #ccc;
-        border-radius: 2px;
-        box-shadow: 1px 1px 4px #ccc;
-        animation: desplazamiento-rs 200ms linear 1;
+        animation: desplazamiento-rs 300ms linear;
     }
 }
 
@@ -614,28 +618,29 @@ nav ul > li:last-child {
     float: left;
 }
 
-#redes-sociales div > div {
-    display: block;
-    float: left;
-    line-height: 36px;
-    width: 120px;
-    height: 40px;
-    overflow: hidden;
-}
 
-
-#redes-sociales div > div > p {
+#redes-sociales div > p {
     display: none;
+    margin: 0px auto;
+    text-align: center;
+    height: 20px;
+    border: 3px solid white;
+    border-radius: 2px;
+    box-shadow: 0px 0px 4px #ccc;
+    line-height: 20px;
+    padding: 5px;
+    background-color: #f4f7fe;
+    text-shadow: 0px 0px 1px #ccc;
+    width: 90px;
+    margin-top: 3px;
 }
 
 @keyframes desplazamiento-rs {
     from {
-        position: relative;
-        left: -70px;
+        transform: translateX(-80%);
     }
     to {
-        position: relative;
-        left: 0px;
+        transform: translateX(0%);
     }
 }
 
@@ -657,7 +662,7 @@ footer .wrap > div {
     margin: 20px 35px 20px 35px;
 }
 
-footer .wrap div h3 {
+footer .wrap div h5 {
     display: block;
     width: 100%;
     background: url(../img/pxgray.png) repeat;
