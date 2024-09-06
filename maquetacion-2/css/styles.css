@@ -414,18 +414,37 @@ nav ul > li:last-child {
     line-height: 130px;
     margin: 0px 10px 30px 10px;
 
-    transition: all 300ms;
-
+    transition: all 1s;
 
     &:hover {
         background-color: #393d3f;
-        text-shadow: 1px 3px black;
-        border-radius: 10%;
+        border-radius: 240px;
         border: 10px solid #37bcf9;
+        box-shadow: 0px 0px 10px gray;
+        animation: blink 10s infinite linear;
     }
 
     &:hover a {
         color: white;
+        text-shadow: 1px 1px 1px black, 1px 2px 1px black, 1px 3px 1px black, 1px 4px 1px black, 1px 5px 1px black, 1px 6px 1px black;
+    }
+}
+
+@keyframes blink {
+    0% {
+        border: 10px solid #37bcf9;
+    }
+    25% {
+        border: 10px solid green;
+    }
+    50% {
+        border: 10px solid yellow;
+    }
+    75% {
+        border: 10px solid white;
+    }
+    100% {
+        border: 10px solid #37bcf9;
     }
 }
 
@@ -437,6 +456,7 @@ nav ul > li:last-child {
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #276194;
+    transition: all 1s;
 }
 
 /* ASIDE */
